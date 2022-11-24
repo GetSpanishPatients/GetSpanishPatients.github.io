@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Start of CSS*/
+:root {
+		--color-yellow-100: #fff187;
+		--color-yellow-200: #ffdd57;
+		--color-yellow-300: #ffc539;
+		--color-yellow-400: #f7a94a;
+		--color-yellow-500: #e8944a;
+		--color-green-100: #a7ef9f;
+		--color-green-200: #76e099;
+		--color-green-300: #3bce8c;
+		--color-green-400: #46b99a;
+		--color-green-500: #39a79c;
+		--color-blue-100: #8cdfed;
+		--color-blue-200: #69c0e2;
+		--color-blue-300: #54a6d9;
+		--color-blue-400: #5f8bc8;
+		--color-blue-500: #5d74ba;
+		--color-gray-100: #c9cbd9;
+		--color-gray-200: #a0a4bb;
+		--color-gray-300: #7c808c;
+		--color-gray-400: #55575c;
+		--color-gray-500: #282b2e;
+		--color-white: white;
+}
+
+body {
+	font-family: 'Montserrat';
+	height: 100vh;
+	background: #efebff;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+
+section {
+	background-color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 40px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	/*
+	filter: drop-shadow(0 2px 4px rgba(40, 43, 46, 0.5));
+	-webkit-filter: drop-shadow(0 2px 4px rgba(40, 43, 46, 0.5));
+	*/
+}
+
+#gsp--header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#gsp--header img {
+	width: max(15%, 100px);
+}
+
+#gsp--header span {
+	color: var(--color-gray-500);
+	font-size: max(1.5vw, 16px);
+	font-weight: 700;
+}
+
+.card-container {
+	margin-top: 40px;
+	width: 100%;
+	filter: drop-shadow(0 2px 4px rgba(40, 43, 46, 0.5));
+	-webkit-filter: drop-shadow(0 2px 4px rgba(40, 43, 46, 0.5));
+}
+
+.card-item {
+	background-color: var(--color-white);
+	border: 1px solid var(--color-blue-100);
+	border-radius: 5px;
+}
+
+.card-item_header {
+	background-color: var(--color-blue-100);
+	border: 1px solid transparent;
+	border-radius: 5px 5px 0 0;
+	padding: 10px 20px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+
+.card-item_content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.card-item_content span {
+	align-self: center;
+	padding-left: 20px;
+}
+
+.card-item_guideline-btn {
+	padding-left: unset!important;
+	color: var(--color-blue-300);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 542px){
+	.card-item_content span {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+/* Accordion */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+	justify-self: end;
+}
+
+.panel {
+	opacity: 0;
+	height: 0;
+	transition: ease .5s;
+	grid-column: 1 / 3;
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Modal */
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	z-index: 10;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-yellow-300);
+	border-radius: 5px;
+}
+
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+	background-color: var(--color-yellow-300);
+	border: 1px solid transparent;
+	border-radius: 5px 5px 0 0;
+	padding: 10px 20px;
+	font-weight: 700;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.modal-header_close-btn {
+	justify-self: end;
+	cursor: pointer;
+}
+
+.modal-body {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 542px){
+	.modal-body {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.modal-body p:first-child {
+	padding-top: 20px;
+}
+
+.modal-list {
+	padding-top: 20px;
+}
+
+.modal-list li {
+	padding-bottom: 10px;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	pointer-events: none;
+	z-index: 9;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* Common */
+.text-bold {
+	font-weight: 700;
+}
+
+/* HighLevel */
+.bg-fixed {
+	background-color: unset;
+}

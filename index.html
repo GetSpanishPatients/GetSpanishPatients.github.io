@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+	<script src="app.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<title>GSP Ticket Hub</title>
+</head>
+<body>
+	<div class="modal" id="modal">
+		<div class="modal-header">
+			<span>Guidelines</span>
+			<span data-close-button class="modal-header_close-btn">✘</span>
+		</div>
+		<div class="modal-body">
+			<p>Para que el equipo de IT te pueda ayudar de la forma más precisa posible, se solicita tener en cuenta lo siguiente:</p>
+			<ul class="modal-list">
+				<li><i data-feather="activity" style="padding-right: 10px;"></i>Si tienes un problema con una base de datos, recuerda siempre brindarnos una muestra. Por ejemplo, si te llegaron 5 leads sin número de teléfono, <span class="text-bold">especifica el nombre o el correo de la mayor cantidad posible.</span> El Equipo de IT necesita una muestra sobre la cual trabajar.</li>
+				<li><i data-feather="activity" style="padding-right: 10px;"></i>Si las llamadas por HighLevel no están funcionando, recuerda usar el 8x8 temporalmente.</li>
+				<li><i data-feather="activity" style="padding-right: 10px;"></i>Si no puedes entrar a HighLevel, fíjate si estás entrando directamente desde <a href="https://app.gspfollowup.com" target="_blank">https://app.gspfollowup.com</a>. Si eso no es suficiente, utiliza un navegador distinto. También te recomendamos utilizar un navegador sólo para HighLevel. Si ninguna de estas opciones es suficiente, comunícate con IT.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="overlay"></div>
+	<main>
+		<section>
+			<header id="gsp--header">
+				<span>GSP Ticket Hub</span>
+				<img src="https://storage.googleapis.com/msgsndr/D4ScKmSDxP2azQpRYpFR/media/62ead98ad1b93f28658922f1.png">
+			</header>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="monitor" style="padding-right: 10px;"></i>
+						<span>IT Support</span>
+					</header>
+					<div class="card-item_content">
+						<span>El equipo de IT está a tu servicio. Recuerda seguir nuestras <span data-modal-target="#modal"  class="card-item_guideline-btn">guidelines</span>.</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/27c258a50cd1b025feea8adf66b495a1?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="bar-chart" style="padding-right: 10px;"></i>
+						<span>ADS Management</span>
+					</header>
+					<div class="card-item_content">
+						<span>El equipo de ADS está a tu servicio.</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/403ee1176607b9f6beb0c35f82c09631?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="box" style="padding-right: 10px;"></i>
+						<span>Operations</span>
+					</header>
+					<div class="card-item_content">
+						<span>El Equipo de Operaciones está a tu servicio.</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/852e6df4599431fa3572756fb12c8241?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="layout" style="padding-right: 10px;"></i>
+						<span>Marketing</span>
+					</header>
+					<div class="card-item_content">
+						<span>Somos el Equipo de Marketing. ¿Cómo podemos apoyarte?</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/0cc5645001683e58dbcd9cef0580ac9f?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="clipboard" style="padding-right: 10px;"></i>
+						<span>Human Resources</span>
+					</header>
+					<div class="card-item_content">
+						<span>Puede realizar una petición o realización de la cita para realizar una petición personal con R.R.H.H.</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/7ac22646c23157c99792ffa7fa1ee95d?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-container">
+				<div class="card-item">
+					<header class="card-item_header">
+						<i data-feather="phone-call" style="padding-right: 10px;"></i>
+						<span>Sales & Customer Service</span>
+					</header>
+					<div class="card-item_content">
+						<span>El Equipo de Sales está a tu servicio.</span>
+						<i data-feather="chevron-down" class="accordion"></i>
+						<div class="panel">
+							<iframe src="https://forms.monday.com/forms/embed/a025014d639c1cd863b295055883963a?r=use1" width="100%" height="500" style="border: 0;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		feather.replace();
+	</script>
+</body>
+</html>
