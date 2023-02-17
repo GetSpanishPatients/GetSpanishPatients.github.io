@@ -16,7 +16,7 @@ function toggleInfo() {
 			this.replaceWith(createSVGElement(feather.icons['chevron-down'].toSvg({class: 'accordion'})));
     } else {
       panel.style.opacity = 1;
-			panel.style.height = "400px";
+			panel.style.height = "700px";
 			this.replaceWith(createSVGElement(feather.icons['chevron-up'].toSvg({class: 'accordion'})));
     }
 }
